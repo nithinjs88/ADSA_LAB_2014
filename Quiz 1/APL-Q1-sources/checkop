@@ -1,0 +1,22 @@
+Printing tree T1 
+  50  215  24
+  80  215  24
+  90  215  24
+  85  215  24
+  100  215  24
+Printing tree T2 
+  1  215  24
+  2  215  24
+  3  215  24
+  4  215  24
+  5  215  24
+  6  215  24
+  7  215  24
+T1 equal to T2 0
+T1 equivalent to T2 0
+iterative preorder of t1 is
+  50  215  24
+  80  215  24
+  90  215  24
+  85  215  24
+  100  215  24
