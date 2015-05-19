@@ -1,0 +1,61 @@
+digraph G { 
+	size ="6,6";
+	edge[arrowhead=none,arrowtail=none]
+	
+	//root
+	node10 [shape=circle,label="10"];
+	
+	//level1
+	node15 [shape=circle,label="15"];
+	node10 -> node15
+	
+	node20 [shape=circle,label="18"];
+	node10 -> node20
+
+	//level 2
+	node25 [shape=circle,label="25"];
+	node15 -> node25
+	node40 [shape=circle,label="40"];
+	node15 -> node40
+	
+	node60 [shape=circle,label="20"];
+	node20 -> node60
+	node80 [shape=circle,label="80"];
+	node20 -> node80
+
+	//level 3
+	node35 [shape=circle,label="35"];
+	node25 -> node35
+	
+	node50 [shape=circle,label="50"];
+	node25 -> node50
+	
+	node55 [shape=circle,label="55"];
+	node40 -> node55
+	
+	node70 [shape=circle,label="70"];
+	node40 -> node70
+
+	
+	
+	node59 [shape=circle,label="60"];
+	node60 -> node59
+	
+	node58 [shape=circle,label="58",style=invis];
+	node60 -> node58[style=invis]
+	
+	node79 [shape=circle,label="79",style=invis];
+	node80 -> node79[style=invis]
+	
+	node78 [shape=circle,label="78",style=invis];
+	node80 -> node78[style=invis]
+	
+		
+	
+
+
+
+
+
+	
+}

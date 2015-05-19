@@ -1,0 +1,27 @@
+graph SampleGraph_no_of_paths {
+//nodes
+one [label="one (source)",color=black,penwidth=2.0];
+two [label="two (1 sp)",color=black,penwidth = 2.0];
+three [label="three (1 sp)",color=black,penwidth = 2.0];
+four [label="four (2 sp)",color=black,penwidth = 2.0];
+five [label="five (2 sp)",color=black,penwidth = 2.0];
+six [label="six (2 sp)",color=black,penwidth = 2.0];
+seven [label="seven (2 sp)",color=black,penwidth = 2.0];
+eight [label="eight (2 sp)",color=black,penwidth = 2.0];
+nine [label="nine (2 sp)",color=black,penwidth = 2.0];
+ten [label="ten (4 sp)",color=black,penwidth = 2.0];
+eleven [label="eleven (destination) (0 sp)",color=black,penwidth=2.0];
+//edges
+one -- two [label="45",color=black,penwidth = 2.0];
+one -- three [label="7",color=black,penwidth = 2.0];
+two -- four [label="32",color=black,penwidth = 2.0];
+three -- four [label="70",color=black,penwidth = 2.0];
+four -- five [label="48",color=black,penwidth = 2.0];
+four -- six [label="23",color=black,penwidth = 2.0];
+five -- seven [label="12",color=black,penwidth = 2.0];
+six -- seven [label="27",color=black,penwidth = 2.0];
+seven -- eight [label="56",color=black,penwidth = 2.0];
+seven -- nine [label="65",color=black,penwidth = 2.0];
+eight -- ten [label="44",color=black,penwidth = 2.0];
+nine -- ten [label="35",color=black,penwidth = 2.0];
+}

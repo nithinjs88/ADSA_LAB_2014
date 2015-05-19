@@ -1,0 +1,6 @@
+getmax
+extractmax
+increasekey 1 14
+insert 12
+insert 15
+insert 13

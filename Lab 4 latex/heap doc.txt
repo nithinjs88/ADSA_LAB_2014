@@ -1,0 +1,11 @@
+A binary heap is a datastructure similar to binary tree with some additional constraints
+	1) The children of an element must be always less than(in a maxheap) or always greater than(in a minheap). it does not specify any relation between the siblings of an element.
+	2) The binary heap is a complete tree where all levels except the lowest level with height 0 is completely filled.
+
+Insertion
+
+	To insert an element we add the element at the last position at level whose height is 0. now the property 1 can be violated.
+So we trickle the element by swapping it with its parent until the parent is less than its children in a minheap or greater than its children in a maxheap
+
+extractMin
+	extract min returns the smallest element by removing it from heap. in a minheap smallest element always occurs at the root. we swap the root and the last element and decrease the heap size by 1. If we observe the element at the root,its left subtree and right subtree are valid  heaps but property 1 is violated. So we do a minheapify operation(for maxheap it is maxheapify).In minheap we swap the parent with its smallest children recursively down the heap until property 1 is satisfied. This operation trickles down the heap unlike the insert operation which happens upwards.

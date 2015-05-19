@@ -1,0 +1,16 @@
+graph SampleGraph {
+//nodes
+hello;
+world;
+how;
+are;
+you;
+NOT;
+//edges
+hello -- world [label="45"];
+world -- how [label="45"];
+are -- how [label="34"];
+NOT -- world [label="673"];
+are -- hello [label="23"];
+are -- NOT [label="234"];
+}

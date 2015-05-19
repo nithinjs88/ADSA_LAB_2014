@@ -1,0 +1,10 @@
+digraph SampleGraph {
+//nodes
+1;
+2;
+3;
+//edges
+1 -> 2 [label="6"];
+1 -> 3 [label="7"];
+2 -> 3 [label="1"];
+}

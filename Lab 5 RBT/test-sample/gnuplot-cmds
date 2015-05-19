@@ -1,0 +1,9 @@
+#Plot various functions of x.
+#Use different styles for plotting.
+
+set title "x vs 2x, log(n)"
+set xlabel "x"
+set ylabel "f(x)"
+plot "data" using 1:3 with lines, log(x) with lines, 2*x with linespoints
+
+

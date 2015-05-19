@@ -1,0 +1,2 @@
+1) ./a.out $input.dot $output.dot
+2) dot -Tpng $output.dot -o $output.png 

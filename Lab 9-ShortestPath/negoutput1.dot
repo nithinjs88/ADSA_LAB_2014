@@ -1,0 +1,6 @@
+graph SampleGraph_no_of_paths {
+//nodes
+one [label="one (source)",color=black,penwidth=2.0];
+two [label="two (destination) (0 sp)",color=black,penwidth=2.0];
+//edges
+}

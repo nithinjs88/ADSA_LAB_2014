@@ -1,0 +1,90 @@
+digraph G { 
+	size ="6,6";
+	edge[arrowhead=none,arrowtail=none]
+	
+	//root
+	node10 [shape=circle,label="15"];
+	
+	//level1
+	node15 [shape=circle,label="25"];
+	node10 -> node15
+	
+	edge[arrowhead=none,arrowtail=none,color=black]
+	
+	node20 [shape=circle,label="20"];
+	node10 -> node20
+
+	//level 2
+	node25 [shape=circle,label="70"];
+	
+	//edge[arrowhead=normal,arrowtail=none,color=blue]
+	node15 -> node25
+	
+	//edge[arrowhead=none,arrowtail=none,color=black]
+	//node15 -> node25
+	//edge[arrowhead=normal,arrowtail=none,color=red]
+	//node25 -> node15	
+	
+	
+	node40 [shape=circle,label="40"];
+	edge[arrowhead=none,arrowtail=none,color=black]	
+	node15 -> node40
+	
+	node60 [shape=circle,label="60"];
+	node20 -> node60
+	node80 [shape=circle,label="80"];
+	node20 -> node80
+
+	//level 3
+	node35 [shape=circle,label="35"];
+	
+	edge[arrowhead=normal,arrowtail=none,color=blue]
+	node25 -> node35
+	
+	edge[arrowhead=none,arrowtail=none,color=black]
+	node25 -> node35
+	edge[arrowhead=normal,arrowtail=none,color=red]
+	node35 -> node25	
+	
+	//node25 -> node35
+	
+	node50 [shape=circle,label="50"];
+	edge[arrowhead=none,arrowtail=none,color=black]
+	node25 -> node50
+		
+	node55 [shape=circle,label="55"];
+	node40 -> node55
+	
+	node70 [shape=circle,label="70",style=invis];
+	node40 -> node70[style=invis]
+
+	
+	
+	node59 [shape=circle,label="10",color=red];
+	node60 -> node59[style=invis]
+	
+	//edge[arrowhead=normal,arrowtail=none,color=red]
+	//node10->node59
+	
+	
+	//edge[arrowhead=normal,arrowtail=none,color=blue]
+	//node50->node10
+
+	node58 [shape=circle,label="58",style=invis];
+	node60 -> node58[style=invis]
+	
+	node79 [shape=circle,label="79",style=invis];
+	node80 -> node79[style=invis]
+	
+	node78 [shape=circle,label="78",style=invis];
+	node80 -> node78[style=invis]
+	
+		
+	
+
+
+
+
+
+	
+}

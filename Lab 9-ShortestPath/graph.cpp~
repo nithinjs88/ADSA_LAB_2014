@@ -1,0 +1,118 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define DEBUG 1
+#define dout if(DEBUG) cout
+#define debug if(DEBUG)
+#define LESSER -1
+#define EQUAL 0
+#define GREATER 1
+#define MAX_VALUE 9999
+class Node {
+	
+	public:	
+		Node(string nodeName) {
+			this->nodeName = nodeName;
+			distFrmSrc = MAX_VALUE;
+			noOfPathsFrmSrc = 0;
+			
+		}		
+		string getNodeName() {
+			return 	nodeName;	
+		}
+		int getDistFrmSrc(){
+			return 	distFrmSrc;	
+		}
+		void setDistFrmSrc() {
+			this->distFrmSrc = distFrmSrc;	
+		}
+		int getNoOfPathsFrmSrc(){
+			return 	noOfPathsFrmSrc;	
+		}
+		void setNoOfPathsFrmSrc() {
+			this->noOfPathsFrmSrc = noOfPathsFrmSrc;	
+		}
+		string toString() {
+			ostringstream oss;
+			oss<<nodeName<<" dist "<<distFrmSrc<< " paths "<<noOfPathsFrmSrc;
+			return oss.str();
+		}
+		int compareTo(Node* toCompare) {
+			int compare;
+			if(distFrmSrc < toCompare->distFrmSrc) {
+				compare = LESSER;
+			} else if(distFrmSrc == toCompare->distFrmSrc) {
+				compare = EQUAL;
+			} else {
+				compare = GREATER;
+			}
+			return compare;
+		}		
+	private:	
+	string nodeName;
+	int distFrmSrc;
+	int noOfPathsFrmSrc;
+};
+
+class Edge {
+	public:
+		Edge(Node* start,Node* end,int length) {
+			this->start = start;
+			this->end = end;
+			this->length = length;
+		}
+		
+		Node* getStart() {
+			return start;
+		}
+
+		Node* getEnd() {
+			return end;
+		}
+		int getLength() {
+			return length;
+		}
+	private:
+		Node* start;
+		Node* end;
+		int length;
+};
+class Graph {
+	private:
+	string graphName;
+	Node* source;
+	Node* sink;
+	//vector<EdgeInfo*> edges;
+	map<Node*,vector<Edge*> > nodeVsEdges;
+	
+	void addNode(Node* node) {
+		vector<Edge*> edges;
+		nodeVsEdges[node] = edges;
+	}
+	
+	void addEdge(Edge* edge) {
+		Node* start = edge->getStart();
+		if(start != NULL) {
+			vector<Edge*> edges = nodeVsEdges[start];
+			//if(edges != NULL)
+			edges.push_back(edge);	
+		}
+	}	
+	
+	public:
+	Graph(){
+	}
+	void initGraph(vector<Node*> nodes,vector<Edge*> edges) {
+		for(int i = 0;i<nodes.size();i++) {
+			addNode(nodes.at(i));		
+		}
+		for(int i = 0;i<edges.size();i++) {
+			addEdge(edges.at(i));		
+		}
+		source = nodes.at(0);
+		sink = nodes.at(nodes.size()-1);
+	}
+};
+
+int main(int argc,char* argv[]) {
+	return 0;
+}

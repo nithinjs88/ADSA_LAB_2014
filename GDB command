@@ -1,0 +1,21 @@
+1) compile with -g
+2) gdb ./{$executable} and r arguments to start debugging
+3) b {$file_name}:{$line_no} - set breakpoint at a particular line in a file
+4) info breakpoints - gives all breakpoints
+5)step or s - step in, n or next goes to next line in source code
+) clear filename:linenum - removing breakpoints
+info locals - show local variables
+8) c - continue till exit or hit breakpoint
+9) finish - Continue running until just after function in the selected stack frame returns. Print the returned
+value (if any)
+10)
+set print address off
+Do not print addresses when displaying their contents
+11) bt - backtrace
+12)r or run will restart the program when stopped in mid-execution
+13) clear filename:linenum
+Delete any breakpoints set at or within the code of the specified line
+14)
+delete breakpoints $breakpoint_no - removes breakpoint
+15) disable/enable breakpoints $breakpoint_no - disable/enable breakpoint
+16) q for quit

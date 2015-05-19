@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\linespread{1.1}
+
+
+\setlength\parindent{0pt}
+
+
+%\setcounter{secnumdepth}{0}
+
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{0.2in}
+    \textmd{Problem Set 1}\\
+    \large{Sreeraj S}\\
+    \textmd{CS14M046}\\
+       \vspace{0.1in}
+    \vspace{0.3in}
+    \date{}
+}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\begin{document}
+
+\maketitle
+
+\section{Assigment}
+\subsection{subset 1}
+
+aseghksag kwjlkjq  kjgl sahk \\
+ksdg
+
+\section{section
+}
+
+\begin{enumerate}
+	\item item 1
+	\item item 2
+	\item item 
+\end{enumerate}
+
+
+
+
+\subsection{Problem 2. a)}
+	The formal definition of a non deterministic turing machine M is as follows. 
+	\[
+        \begin{split}
+          \hspace{-1.5in}   M &= \{Q, \Sigma, \Gamma, \vdash, \sqcup, \delta, s, f, r\}
+        \end{split}
+    \]
+
+	Q = Number of states\\
+	\(\Sigma \) = Input alphabets\\
+	\(\Gamma \) = Tape alphabets\\
+	\(\vdash \) = Left end marker\\
+	\(\sqcup \) = Blank marker\\
+	s = Start state\\
+	f = Accept state\\
+	r = Reject state\\
+	\(\delta \) = Transition relation where
+	
+	\hspace{0.7in} \(\delta \subseteq  \left( Q \times \Gamma \right) \times \left(Q\times\Gamma\times\{L,R\} \right)\) 
+	\paragraph{•}
+	A non deterministic turing machine can be simulated upon a deterministic turing machine. The computation of a non deterministic turing machine can be thought of as a tree in which the nodes represent configurations of the machine. Root is the start configuraion. At each configuration(node) there can be multiple transitions(children). The deterministic TM traverses the tree in a breadth-first manner and tries to find any accepting configuration. 
+	\paragraph{•}
+	The deterministic TM has 3 tapes. The first tape has the input string. The second tape is used for computation of some branch. The third tape holds the path taken and location of the current computation in the tree. When the TM starts, the input string is copied from the first tape to the second tape. The second tape is used to compute. At each step, the third tape is looked at to see which path to take. If at any stage, it reaches an accepting configuration, the TM accepts.
+	
+\subsection{Problem 2. b)}
+\paragraph{•}
+	When the Turing machine is constrained not to overwrite, it can only read the input symbols and move to a state. The input string cannot even be copied to the right side of the input, as there is no way to mark which symbol is being copied. So the turing machine computes only by reading the string. This turing machine can accept only regular sets as its transitions can be said to be equivalent to that of a finite state automaton. The TM reads an input symbol and moves to the next state. If at the end of the input string, the TM reaches an accept state, accept the string. Else reject the string. \\
+	
+\subsection{Problem 3. a)}
+
+	Let EQ = \{ \( M_{1},M_{2} \mid L(M_{1}) = L(M_{2})\) \} 
+	\paragraph{•}
+	To prove EQ is undecidable, reduce EMPTY to EQ i.e. \(EMPTY \leq _{m} EQ\) \\
+	Let K be a turing machine which rejects all strings. \\
+	Define \( \sigma : A \in EMPTY \Leftrightarrow \sigma (A) \in EQ \) \\
+	On input M,\\
+	1. Concatenate description of K to M\\
+	Hence \(<M,K>\) is passed to EQ. If EQ accepts, accept. If EQ rejects, reject. Thus we can check whether L(M) is empty or not. Since EMPTY is undecidable, this is a contradiction.
+	Hence EQ is undecidable.
+	\\
+	
+\subsection{Problem 3. b)}
+
+	To prove : \textit{L} is decidable iff \textit{L} and \(\overbar{L}\) are semi decidable.\\
+	Proof :	\\
+		\(\Rightarrow\) \textit{L} is decidable. Hence by definition \textit{L} is semi decidable (All decidable languages are semi decidable). Let M be the total turing machine corresponding to \textit{L}. Swapping the accept and reject states of M will give a new total TM M'. M' will accept \(\overbar{L}\). \(\overbar{L}\) is decidable, so it is semi decidable.\\
+	\(\Leftarrow\) \textit{L} and \(\overbar{L}\) are semi decidable. So there are turing machines M and M' corresponding to \textit{L} and \(\overbar{L}\). We can create a total TM N, which on any input x, it runs both M and M' simultaneosly on x. \\
+	If x \(\in\) \textit{L}, then M will accept \(\rightarrow\) N will accept x. \\
+	If x \(\not\in\) \textit{L} \(\rightarrow\) x \(\in \overbar{L}\), then M' will accept \(\rightarrow\) N will reject x.\\
+	Hence N is a total TM for L.\\
+	
+	To prove: \(HP \not\leq _{m} \overbar{HP}\)\\
+	Proof: Assume \(HP \leq _{m} \overbar{HP}\). Then by property \(\overbar{HP} \leq _{m} HP\).\\ Since HP is semi decidable, \(\overbar{HP}\) is also semi decidable. \(\rightarrow\) HP and \(\overbar{HP}\) are semi decidable.  \(\rightarrow\) HP is decidable, which is not possible. Hence contradiction.
+	
+\subsection{Problem 3. c)}
+\paragraph{•}
+		The number of languages over a unary alphabet\{1\} is infinite. The number of turing machines are countably infinite. Hence we can associate each turing machine to a number in $\mathbb{N}$. The unary alphabet can be used to denote $\mathbb{N}$ \{1, 11, 111, ...\}. Since there cannot be an onto function from the set of turing machines to the set of all languages over the unary alphabet, there are languages which are undecidable. \\
+		
+		There are turing machines which can loop, hence not all turing machines are total. So there are semi decidable turing machines and semi decidable unary languages corresponding to these turing machines.\\
+		
+\subsection{Problem 4. a)}
+
+	\(f(1) = 1\) Single state TM which writes 1 and accepts.\\
+	\(f(2) = 4\) Two-way infinite TM, with the following transition function:\\
+		((P,0),(Q,1,R)), 	((Q,0),(P,1,L)), 	((P,1),(Q,1,L)), 	((Q,1),(P,1,R))\\
+			f is strictly increasing with k as the number of states increases, more number of 1s can be written.\\
+			
+\subsection{Problem 5. a)}
+\paragraph{•}
+	We can describe a total turing machine for a regular language. This turing machine M has a one-way infinte tape and cannot overwrite on the input string. The TM can move only to the right. The finite control of the TM is similar to the finite state machine of the regular language. When an input symbol is read, the TM transitions to the next state and moves the head to the right. When the head reaches the end of the input string, if the state is accept, then accept the string. Otherwise reject the string.\\
+	
+\subsection{Problem 5. b)}
+To prove: Semi decidable language L is decidable iff there is an enumeration turing machine that enumnerates L in lexicographically increasing order.\\
+Proof:\\
+\(\Rightarrow\) L is decidable. So there is a total TM M for L. We can create an enumeration turing machine E. \\
+E:
+\begin{enumerate}
+	\item Generate strings in lexicographic order
+	\item Run M on generated strings
+	\item If M accepts, print the string
+\end{enumerate}
+\(\Leftarrow\) There is an enumeration turing machine E which enumerates L in lexicograhically increasing order. We can create a total TM M\\
+M:
+\begin{enumerate}
+	\item On input x, enumerate strings till some w. w is lexicographically larger than x (w appeares after x)
+	\item If x has appeared, then M accepts x
+	\item Otherwise M rejects x.
+\end{enumerate}
+
+
+\subsection{Problem 5. c)}
+ Let L be the infinte semi decidable set. There is an enumertation turing machine E for L. We can create an enumeration TM E' as follows:\\
+ E':
+ \begin{enumerate}
+ 	\item Run E and generate strings
+ 	\item If string x is lexicographically larger than the previous string, print x
+ 	\item Else do nothing
+ \end{enumerate}
+ This enumeration TM E' prints a language L' which is in lexicographically increasing order. By the previous proof. L' is decidable. L' \(\subseteq\) L. 
+	
+
+
+\end{document}
+Status API Training Shop Blog About © 2014 GitHub, Inc. Terms Privacy Security Contact

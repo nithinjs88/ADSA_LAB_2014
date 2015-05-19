@@ -1,0 +1,18 @@
+graph SampleGraph {
+//nodes
+one;
+two;
+three;
+four;
+five;
+six;
+//edges
+one -- two [label="1"];
+one -- three [label="3"];
+one -- four [label="4"];
+one -- five [label="5"];
+two -- six [label="5"];
+three -- six [label="4"];
+four -- six [label="3"];
+five -- six [label="2"];
+}

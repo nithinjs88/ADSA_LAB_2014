@@ -1,0 +1,18 @@
+class Tree {
+
+public:
+	Tree(){
+		root = NULL;
+	}
+	void readFiles(string inputFile,string testFile);
+	void addAdvisee(int parentId,int adviseeId,string name);
+	void listAllAdvisee(int id);
+	static void error(string msg);
+	void inorderTraversal();
+private:	
+	class TreeNode* root;
+	class TreeNode* search(int adviseeid,class TreeNode* rootNode);
+	class TreeNode* search(int adviseeid);
+	void inorderTraversal(class TreeNode* rootNode);
+	void printChildren(TreeNode* rootNode);
+};

@@ -1,0 +1,9 @@
+Instructions
+
+1) Copy your functions.cpp file into both Graph1 and Graph2 folders and run the following commands in both folders
+2) make compile (or simply "make" will do)
+3) make run
+4) Count the total marks printed by program in Graph1 (call it x -- these are out of 11) and Graph2 (call it y -- these are out of 11). [Note that in case of height computation, if program shows 1 mark, you add 0 to your count. You need to get 2 marks completely to get the credit for height computation.]
+5) By manually looking at the code, we have given 4 marks depending on the running time of your functions. Call these marks z (these are out of 4).
+6) Total marks are x  * 0.75 + y * 0.25 + z. 
+

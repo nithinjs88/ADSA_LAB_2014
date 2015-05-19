@@ -1,0 +1,78 @@
+digraph G { 
+	edge[arrowhead=normal,arrowtail=none]
+
+	node150 [shape=circle,label="150"];
+	node148 [shape=circle,label="148"];
+	edge [color=blue];
+	node150 -> node148
+	node157 [shape=circle,label="157"];
+	edge [color=red];
+	node150 -> node157
+
+	edge [color=black];
+	node148 -> node150
+	node145 [shape=circle,label="145"];
+	edge [color=blue];
+	node148 -> node145
+
+	edge [color=black];
+	node157 -> node150
+	node152 [shape=circle,label="152"];
+	edge [color=blue];
+	node157 -> node152
+	node175 [shape=circle,label="175"];
+	edge [color=red];
+	node157 -> node175
+
+	edge [color=black];
+	node145 -> node148
+	node147 [shape=circle,label="147"];
+	edge [color=red];
+	node145 -> node147
+
+	edge [color=black];
+	node152 -> node157
+
+	edge [color=black];
+	node175 -> node157
+	node163 [shape=circle,label="163"];
+	edge [color=blue];
+	node175 -> node163
+	node195 [shape=circle,label="195"];
+	edge [color=red];
+	node175 -> node195
+
+	edge [color=black];
+	node147 -> node145
+
+	edge [color=black];
+	node163 -> node175
+	node161 [shape=circle,label="161"];
+	edge [color=blue];
+	node163 -> node161
+	node164 [shape=circle,label="164"];
+	edge [color=red];
+	node163 -> node164
+
+	edge [color=black];
+	node195 -> node175
+
+	edge [color=black];
+	node161 -> node163
+	node160 [shape=circle,label="160"];
+	edge [color=blue];
+	node161 -> node160
+	node162 [shape=circle,label="162"];
+	edge [color=red];
+	node161 -> node162
+
+	edge [color=black];
+	node164 -> node163
+
+	edge [color=black];
+	node160 -> node161
+
+	edge [color=black];
+	node162 -> node161
+
+}

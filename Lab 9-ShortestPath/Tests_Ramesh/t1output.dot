@@ -1,0 +1,27 @@
+graph _no_of_paths {
+//nodes
+S [label="S (source)",color=blue,penwidth=2.0];
+A [label="A (1 sp)",color=blue,penwidth = 2.0];
+B [label="B (1 sp)",color=blue,penwidth = 2.0];
+C [label="C (1 sp)",color=blue,penwidth = 2.0];
+D [label="D (3 sp)",color=blue,penwidth = 2.0];
+E [label="E (1 sp)",color=blue,penwidth = 2.0];
+F [label="F",color=black,penwidth = 2.0];
+G [label="G",color=black,penwidth = 2.0];
+T [label="T (destination) (4 sp)",color=blue,penwidth=2.0];
+//edges
+S -- A [label="4",color=blue,penwidth = 2.0];
+S -- D [label="7",color=blue,penwidth = 2.0];
+S -- B [label="3",color=blue,penwidth = 2.0];
+A -- C [label="1",color=blue,penwidth = 2.0];
+B -- D [label="4",color=blue,penwidth = 2.0];
+C -- E [label="1",color=blue,penwidth = 2.0];
+C -- D [label="3",color=black,penwidth = 2.0];
+D -- E [label="1",color=blue,penwidth = 2.0];
+D -- T [label="3",color=blue,penwidth = 2.0];
+D -- F [label="5",color=black,penwidth = 2.0];
+E -- T [label="4",color=blue,penwidth = 2.0];
+E -- G [label="2",color=black,penwidth = 2.0];
+G -- T [label="3",color=black,penwidth = 2.0];
+T -- F [label="5",color=black,penwidth = 2.0];
+}

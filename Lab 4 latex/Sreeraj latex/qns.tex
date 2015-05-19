@@ -1,0 +1,75 @@
+\documentclass[solution,addpoints,12pt]{exam}
+\printanswers
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\hrule
+\vspace{3mm}
+\noindent 
+{\sf CS6014-2014 : Advanced Theory of Computation  \hfill Given on: Aug 9, 2014}
+\vspace{3mm}\\
+\noindent 
+{\sf Problem Set \#1 \hfill Due on : Aug 18, 08:00}
+\vspace{3mm}
+\hrule
+{\small
+\begin{itemize}
+\item All electronic submissions must be in PDF form produced using \LaTeX. It should be submitted in moodle page for the course. For this problem set, electronic submission is not mandatory.
+\item Referring to sources other than the text books is strongly
+  discouraged. 
+\end{itemize}}
+\hrule
+
+
+\begin{questions}
+
+\question
+Reading Assignments : Work out the complete details of the notion of configurations (2nd half of lecture 29 in Kozen's Textbook), variations of Turing machine model (Lecture 30 in Kozen's Textbook). {\bf No submission needed for this question}.
+
+\question[10]
+Theme : Variants of Turing Machine Model.
+\begin{parts}
+\part[5] A non-deterministic Turing machine is one with a mutliple-valued transition relation.
+Give a formal definition of these Turing machines. Argue that every
+non-deterministic Turing machine can simulated by a deterministic
+Turing machine.
+\part[5] Consider one-tape Turing Machines that are constrained not to overwrite the input string.
+(They may write all that they want to the right of the input.). 
+Argue that such TMs can accept only regular sets.
+\end{parts}
+
+% WRITE YOUR SOLUTION LIKE THIS
+%\begin{solution}
+% My solution goes like this.
+%\end{solution}
+
+\question[15]
+Theme : Undecidability 
+\begin{parts}
+\part[5]
+Show that there is no Total Turing machine that checks if two given Turing machines accept the same language.
+\part[5]
+Show that a language $L$ is decidable if and only if $L$ and $\overline{L}$ are semi-decidable. Use this to argue that $HP \not \le_m \overline{HP}$.
+\part[5] Argue that there are unary languages (languages over singleton alphabet) which are semi-decidable but not decidable. Show that there are unary languages which are not even semi-decidable.
+\end{parts}
+
+\question[10]
+Theme : Functions that are not computable. \\
+For the purposes of this problem, let $\Gamma = \{0,1,\cup\}$ be the tape alphabet. For a $k \in \mathbb{N}$ consider the set of all $k-$state Turing machines that halt when started with the empty tape (that is, input is $\epsilon$). Define a function $f(k)$ to be the maximum number of 1s remaining in the tape, where the maximum is taken over all TMs in the above set. 
+\begin{parts}
+\part[3] What is the value of $f(1)$ and $f(2)$? Is $f$ a strictly increasing function with $k$?
+\part[7] Show that there cannot be a Turing machine which when given $k$ outputs $f(k)$. (In class, we discussed only about Turing machines that always says yes or no. Extend it to TMs that can compute functions. Hint : Try a proof by contradiction. Suppose there is TM for computing $f$. Contradict your answer to part (a) of this question.)
+\end{parts}
+
+\question[15]
+Theme : Subsets.
+\begin{parts}
+\part[5] Argue that Regular languages are decidable. Prove that every infinite regular language has a subset which is not even semi-decidable.
+\part[5] Prove that a semi-decidable language (recursive enumerable set) is decidable if and only if there 
+exists an enumeration Turing machine\footnote{An enumeration Turing machine is a Turing machine that runs as follows. It has a special tape called the enumeration tape and a special state called the enumeration state. When a string is written in the enumeration tape and the Turing machine goes to the enumeration state, the string on the enumeration tape is said to be "enumerated" by the Enumeration machine. The enumeration Turing machine starts on empty input tape and keeps enumerating strings. We say that an enumeration Turing machine enumerates a language $L$, if it eventually enumerates all strings in the language and does not ever enumerate any string outside $L$. To familiarize with this concept you can try to argue the following : {\em A language $L$ is semi-decidable if and only if there is an enumeration Turing machine that enumerates $L$}.} that enumerates $L$ in the lexicographically increasing order.
+\part[5] Use the above to prove that every infinite semi-decidable set contains an infinite decidable subset.
+\end{parts}
+
+\end{questions}
+
+\end{document}
