@@ -1,0 +1,90 @@
+====================================
+Basic editing
+====================================
+
+dd - delete(cut) a line
+D - delete(cut) the remainder of the line, starting with current cursor position
+ndd - delete(cut) n lines
+dw - delete(cut) word( from staring cursor position to end of word)
+ndw - delete(cut) n words.
+x - delete(cut) current character
+
+yy - copy line
+nyy - copy n lines
+yw - copy word
+nyw - copy n words
+y$ - copy to end of line
+
+p - paste the line down
+P - paste at current position
+
+cc - change (replace) an entire line (goes into insert mode)
+cw - change (replace) to the end of word (goes into insert mode)
+
+/pattern - search for pattern
+?pattern - search backward for pattern
+n - repeat search in same direction
+N - repeat search in opposite direction
+:%s/old/new/g - replace all old with new throughout file
+:%s/old/new/gc - replace all old with new throughout file with confirmations
+
+u - undo the last action(Pressing again u undoes the undo...revert back)
+
+========================================
+Marking text (visual mode)
+========================================
+
+v - start visual mode, mark lines, then do command (such as y-yank)
+V - start Linewise visual mode
+o - move to other end of marked area
+Ctrl+v - start visual block mode
+O - move to Other corner of block
+aw - mark a word
+ab - a () block (with braces)
+aB - a {} block (with brackets)
+ib - inner () block
+iB - inner {} block
+Esc - exit visual mode
+
+======================================
+Moving cursor
+======================================
+1) 0 - start of current line
+2) $ - end of current line
+3) 1G - start of file
+4) nG - start of nth line
+5) G - last line
+w - 1 word to right
+b - 1 word to left
+ 
+======
+Mode
+======
+1) i - insert mode
+2) R - replace mode
+3) A - append(insert mode with cursor at end of file)
+ 
+==================
+Screen manipulation(^ for Ctrl)
+==================
+
+^f	move forward one screen
+^b	move backward one screen
+^d	move down (forward) one half screen
+^u	move up (back) one half screen
+^l	redraws the screen
+^r	redraws the screen, removing deleted lines
+
+
+
+==========
+Commands
+==========
+:wq - save and exit
+:q - exit
+:q! - exit forcefully
+:set number - show line numbers
+:w - save
+
+To show line numbers at start of vi or vim, add "set number"(without quotes) to .vimrc(hidden file in home folder. Create new if reqd). 
+ 
